@@ -11,6 +11,7 @@ import code
 
 class CodeTester(unittest.TestCase):
     def setUp(self):
+        print("setUp is running")
         self.s = code.FooBar()
 
     def set_up(self):
@@ -21,7 +22,7 @@ class CodeTester(unittest.TestCase):
         print("SetUp is running")
         self.assertTrue(self.s.text == 'Hello, Gang!')
 
-    def TearDown(self):
+    def tearDown(self):
         print("TearDown is running")
 
     def tear_down(self):
