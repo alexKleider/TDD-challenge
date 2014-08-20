@@ -22,8 +22,11 @@ class CodeTester(unittest.TestCase):
         print("SetUp is running")
         self.assertTrue(self.s.text == 'Hello, Gang!')
 
-    def tearDown(self):
+    def TearDown(self):
         print("TearDown is running")
+
+    def tearDown(self):
+        print("tearDown is running")
 
     def tear_down(self):
         print("tear_down is running")
