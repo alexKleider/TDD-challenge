@@ -63,7 +63,10 @@ class CodeTester(unittest.TestCase):
         self.assertTrue(self.s.bar() == "Hello, Bar.")
         CodeTester.counter_dic['assertTrue'] = \
                     CodeTester.counter_dic.setdefault('assertTrue', 0) + 1
+        CodeTester.counter_dic['assertTrue'] += 1
 
+    def test_counter(self):
+        self.assertEqual(CodeTester.counter_dic['assertTrue'], 2)
 
 if __name__ == "__main__":
     unittest.main()
